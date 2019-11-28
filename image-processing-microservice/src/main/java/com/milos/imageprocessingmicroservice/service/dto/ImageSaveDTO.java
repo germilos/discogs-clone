@@ -10,7 +10,9 @@ import org.springframework.web.multipart.MultipartFile;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ImageSaveDTO {
-    private MultipartFile file;
-    private Long uploaderId;
+public class ImageSaveDTO
+{
+	private MultipartFile file;
+	private Long uploaderId;
+	private Long itemId;
 }

@@ -81,34 +81,16 @@ public class ItemServiceIT
 		User contributor = new User(1l, "Milos");
 		releaseSaveDTO.setContributor(contributor);
 
-		Path imageOne = Paths.get("static\\images\\Capture.PNG");
 		Path imageOneAbsolute = Paths.get(
 				"C:\\java\\moje\\projekti\\discogs\\discogs-clone\\src\\main\\resources\\static\\images\\Capture.PNG");
-
-		File imageOneAbsoluteFile = imageOneAbsolute.toFile();
-
-		Path imageTwo = Paths.get("static\\images\\Capture2.PNG");
-
-		//		List<MultipartFile> multipartFiles = new ArrayList<>();
-
-		MultipartFile mockMultipartFileOne = new MockMultipartFile("firstImage", "Capture.PNG", null,
+		Path imageTwoAbsolute = Paths.get(
+				"C:\\java\\moje\\projekti\\discogs\\discogs-clone\\src\\main\\resources\\static\\images\\Capture2.PNG");
+		MultipartFile mockMultipartFileOne = new MockMultipartFile("firstImage", "Capture.PNG", "image/png",
 				Files.readAllBytes(imageOneAbsolute));
+		MultipartFile mockMultipartFileTwo = new MockMultipartFile("secondImage", "Capture2.PNG", "image/png",
+				Files.readAllBytes(imageTwoAbsolute));
 
-		MultipartFile mockMultipartFileOneWithInputStream = new MockMultipartFile("firstImage",
-				new BufferedInputStream(new FileInputStream(imageOneAbsoluteFile)));
-		//		MultipartFile mockMultipartFileTwo = new MockMultipartFile("secondImage", "Capture2.PNG", null,
-		//				Files.readAllBytes(imageTwo));
-		//		multipartFiles.add(mockMultipartFileOne);
-		//		multipartFiles.add(mockMultipartFileTwo);
-
-		releaseSaveDTO.setImageFiles(new MultipartFile[] { mockMultipartFileOne });
-		//		Set<Image> images = new HashSet<>();
-		//		Image someImage = new Image(600, 600, "primary", "Primaryimageuri", contributor);
-		//		Image someOtherImage = new Image(600, 600, "secondary", "Secondaryimageuri", contributor);
-		//		images.add(someImage);
-		//		images.add(someOtherImage);
-		//		releaseSaveDTO.setImages(images);
-
+		releaseSaveDTO.setImageFiles(new MultipartFile[] { mockMultipartFileOne, mockMultipartFileTwo });
 		ItemDetailDTO savedRelease = itemService.save(releaseSaveDTO);
 
 		assertThat(savedRelease).isNotNull();

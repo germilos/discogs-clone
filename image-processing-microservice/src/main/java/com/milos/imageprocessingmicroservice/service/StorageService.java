@@ -9,17 +9,18 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
-public interface StorageService {
+public interface StorageService
+{
 
-    void init();
+	void init();
 
-    Long store(ImageSaveDTO imageSaveDTO);
+	ImageDTO store(ImageSaveDTO imageSaveDTO);
 
-    Stream<Path> loadAll();
+	Stream<Path> loadAll();
 
-    Path load(String filename);
+	Path load(String filename);
 
-    Resource loadAsResource(String filename);
+	Resource loadAsResource(String filename);
 
-    void deleteAll();
+	void deleteAll();
 }

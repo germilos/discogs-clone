@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "image")
@@ -20,35 +21,46 @@ public class Image implements Serializable
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false)
-	private Integer width;
-
-	@Column(nullable = false)
-	private Integer height;
-
-	@Column(nullable = false, length = 50)
-	private String type;
-
-	@Column
-	private String uri;
+	@Column(name = "upload_date")
+	private LocalDateTime uploadDate;
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User uploader;
 
-	public Image(Integer width, Integer height, String type, String uri, User uploader)
+	//	@Column(nullable = false)
+	//	private Integer width;
+	//
+	//	@Column(nullable = false)
+	//	private Integer height;
+	//
+	//	@Column(nullable = false, length = 50)
+	//	private String type;
+
+	//	@Column
+	//	private String uri;
+	//
+	//	@ManyToOne
+	//	@JoinColumn(name = "user_id")
+	//	private User uploader;
+
+	public Image(Long id, LocalDateTime uploadDate, User uploader)
 	{
-		this.width = width;
-		this.height = height;
-		this.type = type;
-		this.uri = uri;
+		this.id = id;
+		this.uploadDate = uploadDate;
 		this.uploader = uploader;
 	}
+
+	//	public Image(Integer width, Integer height, String type, String uri, User uploader)
+	//	{
+	//
+	//		this.uploader = uploader;
+	//	}
 
 	@Override
 	public int hashCode()
 	{
-		return this.uri.hashCode();
+		return this.id.hashCode();
 	}
 
 	@Override

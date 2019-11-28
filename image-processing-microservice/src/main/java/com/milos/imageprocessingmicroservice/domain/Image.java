@@ -42,15 +42,19 @@ public class Image
 	@Column(name = "upload_date")
 	private LocalDateTime dateAdded;
 
+	@Column(name = "item_id")
+	private Long itemId;
+
 	public Image(String originalName, String extension, Integer width, Integer height, String uri, Long uploaderId,
-			LocalDateTime dateAdded)
+			LocalDateTime dateAdded, Long itemId)
 	{
-	    this.originalName = originalName;
-	    this.extension = extension;
+		this.originalName = originalName;
+		this.extension = extension;
 		this.width = width;
 		this.height = height;
 		this.uri = uri;
 		this.uploaderId = uploaderId;
 		this.dateAdded = dateAdded;
+		this.itemId = itemId;
 	}
 }

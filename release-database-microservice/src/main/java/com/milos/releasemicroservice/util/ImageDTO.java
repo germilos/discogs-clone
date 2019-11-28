@@ -1,11 +1,11 @@
-package com.milos.imageprocessingmicroservice.service.dto;
+package com.milos.releasemicroservice.util;
+
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
 
 @Getter
 @Setter

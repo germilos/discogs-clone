@@ -1,9 +1,6 @@
 package com.milos.releasemicroservice.service.impl;
 
-import com.milos.releasemicroservice.domain.Artist;
-import com.milos.releasemicroservice.domain.Item;
-import com.milos.releasemicroservice.domain.Label;
-import com.milos.releasemicroservice.domain.Release;
+import com.milos.releasemicroservice.domain.*;
 import com.milos.releasemicroservice.exception.ItemNotFoundException;
 import com.milos.releasemicroservice.repo.ItemRepository;
 import com.milos.releasemicroservice.repo.ReleaseRepository;
@@ -14,6 +11,7 @@ import com.milos.releasemicroservice.service.dto.*;
 import com.milos.releasemicroservice.service.mapper.factory.ArtistMapperFactory;
 import com.milos.releasemicroservice.service.mapper.factory.LabelMapperFactory;
 import com.milos.releasemicroservice.service.mapper.factory.ReleaseMapperFactory;
+import com.milos.releasemicroservice.util.ImageDTO;
 import com.milos.releasemicroservice.util.ImageMultipleSaveDTO;
 import com.milos.releasemicroservice.util.ImageProcessingServiceProxy;
 import lombok.extern.slf4j.Slf4j;
@@ -136,10 +134,19 @@ public class ItemServiceImpl implements ItemService
 	{
 		Release releaseToSave = (Release) releaseMapperFactory.resolveEntityMapper("Save").toEntity(releaseSaveDTO);
 
-//		List<Long> imageIds = imageProcessingServiceProxy.storeImages(releaseSaveDTO.getContributor().getId(), releaseSaveDTO.getImageFiles());
-				List<Long> imageIds = imageProcessingServiceProxy.storeImages(releaseSaveDTO.getContributor().getId(), releaseSaveDTO.getImageFiles());
 		placeExistingEntitiesInRelease(releaseToSave);
 		Item savedRelease = itemRepository.save(releaseToSave);
+
+		List<ImageDTO> imageDTOS = imageProcessingServiceProxy.storeImages(releaseSaveDTO.getContributor().getId(),
+				savedRelease.getId(), releaseSaveDTO.getImageFiles());
+
+		// TODO: Retrieve uploader from DB
+		imageDTOS.forEach(imageDTO -> {
+			Image image = new Image(imageDTO.getId(), imageDTO.getUploadDate(),
+					new User(imageDTO.getUploaderId(), "Pera"));
+			savedRelease.getImages().add(image);
+		});
+		itemRepository.save(savedRelease);
 
 		return createDetailDTO(savedRelease);
 	}

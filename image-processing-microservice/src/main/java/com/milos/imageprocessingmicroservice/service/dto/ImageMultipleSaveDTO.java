@@ -16,4 +16,5 @@ public class ImageMultipleSaveDTO
 {
 	private List<MultipartFile> files;
 	private Long uploaderId;
+	private Long itemId;
 }

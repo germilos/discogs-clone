@@ -6,6 +6,7 @@ import com.milos.imageprocessingmicroservice.exception.StorageException;
 import com.milos.imageprocessingmicroservice.exception.StorageFileNotFoundException;
 import com.milos.imageprocessingmicroservice.repo.ImageRepository;
 import com.milos.imageprocessingmicroservice.service.StorageService;
+import com.milos.imageprocessingmicroservice.service.dto.ImageDTO;
 import com.milos.imageprocessingmicroservice.service.dto.ImageSaveDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
@@ -46,7 +47,7 @@ public class FileSystemStorageService implements StorageService
 	}
 
 	@Override
-	public Long store(ImageSaveDTO imageSaveDTO)
+	public ImageDTO store(ImageSaveDTO imageSaveDTO)
 	{
 		BufferedImage originalImage = getBufferedImage(imageSaveDTO.getFile());
 
@@ -56,7 +57,8 @@ public class FileSystemStorageService implements StorageService
 				imageSaveDTO.getFile().getOriginalFilename().lastIndexOf("."));
 
 		Image savedImage = new Image(nameWithoutExtension, extension, originalImage.getWidth(),
-				originalImage.getHeight(), null, imageSaveDTO.getUploaderId(), LocalDateTime.now());
+				originalImage.getHeight(), null, imageSaveDTO.getUploaderId(), LocalDateTime.now(),
+				imageSaveDTO.getItemId());
 		savedImage = imageRepository.save(savedImage);
 
 		Path path = generatePath(savedImage);
@@ -65,7 +67,9 @@ public class FileSystemStorageService implements StorageService
 		savedImage.setUri(path.toString());
 		imageRepository.save(savedImage);
 
-		return savedImage.getId();
+		ImageDTO imageDTO = new ImageDTO(savedImage.getId(), savedImage.getDateAdded(), savedImage.getItemId(),
+				savedImage.getUploaderId());
+		return imageDTO;
 	}
 
 	@Override
