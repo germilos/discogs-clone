@@ -81,25 +81,17 @@ public class ItemServiceIT
 		User contributor = new User(1l, "Milos");
 		releaseSaveDTO.setContributor(contributor);
 
-		Path imageOneAbsolute = Paths.get(
-				"C:\\java\\moje\\projekti\\discogs\\discogs-clone\\src\\main\\resources\\static\\images\\Capture.PNG");
-		Path imageTwoAbsolute = Paths.get(
-				"C:\\java\\moje\\projekti\\discogs\\discogs-clone\\src\\main\\resources\\static\\images\\Capture2.PNG");
-		MultipartFile mockMultipartFileOne = new MockMultipartFile("firstImage", "Capture.PNG", "image/png",
-				Files.readAllBytes(imageOneAbsolute));
-		MultipartFile mockMultipartFileTwo = new MockMultipartFile("secondImage", "Capture2.PNG", "image/png",
-				Files.readAllBytes(imageTwoAbsolute));
-
-		releaseSaveDTO.setImageFiles(new MultipartFile[] { mockMultipartFileOne, mockMultipartFileTwo });
+		releaseSaveDTO.setImageFiles(constructImages());
 		ItemDetailDTO savedRelease = itemService.save(releaseSaveDTO);
 
 		assertThat(savedRelease).isNotNull();
 		assertThat(savedRelease.getName()).isNotNull();
 		assertThat(savedRelease.getName()).isEqualTo("Some release dto");
+//		assertThat(savedRelease.getImages().size()).isEqualTo(2);
 	}
 
 	@Test
-	public void givenNewReleaseWithExistingArtistAndLabel_whenSavingToDB_thenCorrect()
+	public void givenNewReleaseWithExistingArtistAndLabel_whenSavingToDB_thenCorrect() throws IOException
 	{
 		ReleaseSaveDTO releaseSaveDTO = new ReleaseSaveDTO();
 		releaseSaveDTO.setName("Some other release dto");
@@ -113,18 +105,15 @@ public class ItemServiceIT
 		releaseSaveDTO.getGenres().add(new GenreSaveItemDTO(1l, "Hip Hop"));
 		User contributor = new User(1l, "Milos");
 		releaseSaveDTO.setContributor(contributor);
-		Set<Image> images = new HashSet<>();
-//		Image someImage = new Image(600, 600, "primary", "Primaryimageuri", contributor);
-//		Image someOtherImage = new Image(600, 600, "secondary", "Secondaryimageuri", contributor);
-//		images.add(someImage);
-//		images.add(someOtherImage);
-		//		releaseSaveDTO.setImages(images);
+
+		releaseSaveDTO.setImageFiles(constructImages());
 
 		ItemDetailDTO savedRelease = itemService.save(releaseSaveDTO);
 
 		assertThat(savedRelease).isNotNull();
 		assertThat(savedRelease.getName()).isNotNull();
 		assertThat(savedRelease.getName()).isEqualTo("Some other release dto");
+//		assertThat(savedRelease.getImages().size()).isEqualTo(2);
 	}
 
 	@Test
@@ -242,4 +231,19 @@ public class ItemServiceIT
 		Page<ItemInExploreDTO> items = itemService.getAll(searchCriteria, pageable);
 		assertThat(items.getNumberOfElements()).isGreaterThan(0);
 	}
+
+	private MultipartFile[] constructImages() throws IOException
+	{
+		Path imageOneAbsolute = Paths.get(
+				"C:\\java\\moje\\projekti\\discogs\\discogs-clone\\src\\main\\resources\\static\\images\\Capture.PNG");
+		Path imageTwoAbsolute = Paths.get(
+				"C:\\java\\moje\\projekti\\discogs\\discogs-clone\\src\\main\\resources\\static\\images\\Capture2.PNG");
+		MultipartFile mockMultipartFileOne = new MockMultipartFile("firstImage", "Capture.PNG", "image/png",
+				Files.readAllBytes(imageOneAbsolute));
+		MultipartFile mockMultipartFileTwo = new MockMultipartFile("secondImage", "Capture2.PNG", "image/png",
+				Files.readAllBytes(imageTwoAbsolute));
+
+		return new MultipartFile[] { mockMultipartFileOne, mockMultipartFileTwo };
+	}
+
 }

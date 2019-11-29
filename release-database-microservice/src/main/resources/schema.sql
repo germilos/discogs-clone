@@ -77,11 +77,8 @@ ALTER SEQUENCE discogs_release_microservice_two.genere_id_seq OWNED BY discogs_r
 --
 
 CREATE TABLE discogs_release_microservice_two.image (
-    width integer NOT NULL,
-    height integer NOT NULL,
-    uri character varying(200),
-    type character varying(50) NOT NULL,
     id bigint NOT NULL,
+    upload_date timestamp WITHOUT TIME ZONE NOT NULL,
     item_id bigint NOT NULL,
     user_id bigint NOT NULL
 );
