@@ -91,7 +91,6 @@ public class ItemDTOTest
 		assertThat(itemInExploreDTO).isNotNull();
 		assertThat(itemInExploreDTO.getName()).isEqualTo(label.getName());
 		assertThat(itemInExploreDTO.getThumbnail()).isNotNull();
-		assertThat(itemInExploreDTO.getThumbnail().getType()).isEqualTo("primary");
 	}
 
 	@Test
@@ -103,7 +102,6 @@ public class ItemDTOTest
 		assertThat(itemInExploreDTO).isNotNull();
 		assertThat(itemInExploreDTO.getName()).isEqualTo(release.getName());
 		assertThat(itemInExploreDTO.getThumbnail()).isNotNull();
-		assertThat(itemInExploreDTO.getThumbnail().getType()).isEqualTo("primary");
 		assertThat(itemInExploreDTO.getArtist().getName()).isEqualTo(release.getArtist().getName());
 	}
 
@@ -122,10 +120,10 @@ public class ItemDTOTest
 		User contributor = new User(1l, "Milos");
 
 		Set<Image> images = new HashSet<>();
-		Image someImage = new Image(600, 600, "primary", "Primaryimageuri", contributor);
-		Image someOtherImage = new Image(600, 600, "secondary", "Secondaryimageuri", contributor);
-		images.add(someImage);
-		images.add(someOtherImage);
+//		Image someImage = new Image(600, 600, "primary", "Primaryimageuri", contributor);
+//		Image someOtherImage = new Image(600, 600, "secondary", "Secondaryimageuri", contributor);
+//		images.add(someImage);
+//		images.add(someOtherImage);
 //		releaseSaveDTO.setImages(images);
 
 		ArtistInReleaseDTO artistInReleaseDTO = new ArtistInReleaseDTO(1l, "Some artist name");
@@ -200,14 +198,14 @@ public class ItemDTOTest
 		firstRelease.setArtist(artist);
 		firstRelease.setLabel(label);
 
-		Image thumbnail = new Image();
-		thumbnail.setId(1l);
-		thumbnail.setType("primary");
-		thumbnail.setHeight(500);
-		thumbnail.setWidth(600);
-		thumbnail.setUri("Someuri");
+//		Image thumbnail = new Image();
+//		thumbnail.setId(1l);
+//		thumbnail.setType("primary");
+//		thumbnail.setHeight(500);
+//		thumbnail.setWidth(600);
+//		thumbnail.setUri("Someuri");
 
-		firstRelease.getImages().add(thumbnail);
+//		firstRelease.getImages().add(thumbnail);
 		return firstRelease;
 	}
 
@@ -275,14 +273,14 @@ public class ItemDTOTest
 
 		label.setReleases(releases);
 
-		Image thumbnail = new Image();
-		thumbnail.setId(1l);
-		thumbnail.setType("primary");
-		thumbnail.setHeight(500);
-		thumbnail.setWidth(600);
-		thumbnail.setUri("Someuri");
-
-		label.getImages().add(thumbnail);
+//		Image thumbnail = new Image();
+//		thumbnail.setId(1l);
+//		thumbnail.setType("primary");
+//		thumbnail.setHeight(500);
+//		thumbnail.setWidth(600);
+//		thumbnail.setUri("Someuri");
+//
+//		label.getImages().add(thumbnail);
 
 		return label;
 	}

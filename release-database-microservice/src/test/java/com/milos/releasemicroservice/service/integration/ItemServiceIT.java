@@ -114,10 +114,10 @@ public class ItemServiceIT
 		User contributor = new User(1l, "Milos");
 		releaseSaveDTO.setContributor(contributor);
 		Set<Image> images = new HashSet<>();
-		Image someImage = new Image(600, 600, "primary", "Primaryimageuri", contributor);
-		Image someOtherImage = new Image(600, 600, "secondary", "Secondaryimageuri", contributor);
-		images.add(someImage);
-		images.add(someOtherImage);
+//		Image someImage = new Image(600, 600, "primary", "Primaryimageuri", contributor);
+//		Image someOtherImage = new Image(600, 600, "secondary", "Secondaryimageuri", contributor);
+//		images.add(someImage);
+//		images.add(someOtherImage);
 		//		releaseSaveDTO.setImages(images);
 
 		ItemDetailDTO savedRelease = itemService.save(releaseSaveDTO);

@@ -4,6 +4,7 @@ import com.milos.releasemicroservice.domain.*;
 import com.milos.releasemicroservice.exception.ItemNotFoundException;
 import com.milos.releasemicroservice.repo.ItemRepository;
 import com.milos.releasemicroservice.repo.ReleaseRepository;
+import com.milos.releasemicroservice.repo.UserRepository;
 import com.milos.releasemicroservice.repo.criteria.SearchCriteria;
 import com.milos.releasemicroservice.repo.criteria.specification.SearchSpecification;
 import com.milos.releasemicroservice.service.ItemService;
@@ -32,6 +33,7 @@ public class ItemServiceImpl implements ItemService
 {
 	private final ItemRepository itemRepository;
 	private final ReleaseRepository releaseRepository;
+	private final UserRepository userRepository;
 
 	private final ReleaseMapperFactory releaseMapperFactory;
 	private final ArtistMapperFactory artistMapperFactory;
@@ -40,12 +42,13 @@ public class ItemServiceImpl implements ItemService
 	private final ImageProcessingServiceProxy imageProcessingServiceProxy;
 
 	public ItemServiceImpl(final ItemRepository itemRepository, final ReleaseRepository releaseRepository,
-			final ArtistMapperFactory artistMapperFactory, final LabelMapperFactory labelMapperFactory,
-			final ReleaseMapperFactory releaseMapperFactory,
+			final UserRepository userRepository, final ArtistMapperFactory artistMapperFactory,
+			final LabelMapperFactory labelMapperFactory, final ReleaseMapperFactory releaseMapperFactory,
 			final ImageProcessingServiceProxy imageProcessingServiceProxy)
 	{
 		this.itemRepository = itemRepository;
 		this.releaseRepository = releaseRepository;
+		this.userRepository = userRepository;
 		this.releaseMapperFactory = releaseMapperFactory;
 		this.artistMapperFactory = artistMapperFactory;
 		this.labelMapperFactory = labelMapperFactory;
@@ -139,16 +142,18 @@ public class ItemServiceImpl implements ItemService
 
 		List<ImageDTO> imageDTOS = imageProcessingServiceProxy.storeImages(releaseSaveDTO.getContributor().getId(),
 				savedRelease.getId(), releaseSaveDTO.getImageFiles());
+		savedRelease.getImages()
+				.addAll(imageDTOS.stream().map(this::convertImageDTOToImage).collect(Collectors.toList()));
 
-		// TODO: Retrieve uploader from DB
-		imageDTOS.forEach(imageDTO -> {
-			Image image = new Image(imageDTO.getId(), imageDTO.getUploadDate(),
-					new User(imageDTO.getUploaderId(), "Pera"));
-			savedRelease.getImages().add(image);
-		});
 		itemRepository.save(savedRelease);
 
 		return createDetailDTO(savedRelease);
+	}
+
+	private Image convertImageDTOToImage(ImageDTO imageDTO)
+	{
+		Optional<User> userOptional = userRepository.findById(imageDTO.getUploaderId());
+		return new Image(imageDTO.getId(), imageDTO.getUploadDate(), userOptional.orElseThrow(RuntimeException::new));
 	}
 
 	@Override

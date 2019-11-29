@@ -6,7 +6,11 @@ import com.milos.releasemicroservice.service.dto.ArtistInReleaseDTO;
 import com.milos.releasemicroservice.service.dto.ItemInExploreDTO;
 import org.mapstruct.Mapper;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Mapper(imports = Collectors.class, componentModel = "spring")
@@ -30,8 +34,9 @@ public interface ItemInExploreDTOMapper extends EntityMapper<ItemInExploreDTO, I
 
 		if (entity.getImages() != null && entity.getImages().size() > 0)
 		{
-
-			itemInExploreDTO.setThumbnail(entity.getImages().stream().filter(el -> "primary".equals(el.getType()))
+			LocalDateTime maxDate = entity.getImages().stream().map(img -> img.getUploadDate())
+					.min(LocalDateTime::compareTo).orElseThrow(RuntimeException::new);
+			itemInExploreDTO.setThumbnail(entity.getImages().stream().filter(el -> el.getUploadDate().equals(maxDate))
 					.collect(Collectors.toList()).get(0));
 		}
 
