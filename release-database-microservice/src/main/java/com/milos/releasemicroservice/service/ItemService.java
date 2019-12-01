@@ -9,6 +9,7 @@ import com.milos.releasemicroservice.service.dto.ReleaseSaveDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -30,7 +31,7 @@ public interface ItemService
 
 	List<ReleaseInItemDTO> getReleasesByLabelId(Long labelId);
 
-	ItemDetailDTO save(ReleaseSaveDTO releaseSaveDTO);
+	ItemDetailDTO save(ReleaseSaveDTO releaseSaveDTO, MultipartFile[] images);
 
 	Item update(Item item);
 }

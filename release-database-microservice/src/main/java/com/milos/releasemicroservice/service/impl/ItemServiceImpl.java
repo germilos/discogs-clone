@@ -21,6 +21,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
@@ -133,15 +134,17 @@ public class ItemServiceImpl implements ItemService
 	}
 
 	@Override
-	public ItemDetailDTO save(ReleaseSaveDTO releaseSaveDTO)
+	public ItemDetailDTO save(ReleaseSaveDTO releaseSaveDTO, MultipartFile[] images)
 	{
 		Release releaseToSave = (Release) releaseMapperFactory.resolveEntityMapper("Save").toEntity(releaseSaveDTO);
 
 		placeExistingEntitiesInRelease(releaseToSave);
 		Item savedRelease = itemRepository.save(releaseToSave);
 
+//		List<ImageDTO> imageDTOS = imageProcessingServiceProxy.storeImages(releaseSaveDTO.getContributor().getId(),
+//				savedRelease.getId(), releaseSaveDTO.getImages());
 		List<ImageDTO> imageDTOS = imageProcessingServiceProxy.storeImages(releaseSaveDTO.getContributor().getId(),
-				savedRelease.getId(), releaseSaveDTO.getImageFiles());
+				savedRelease.getId(), images);
 		savedRelease.getImages()
 				.addAll(imageDTOS.stream().map(this::convertImageDTOToImage).collect(Collectors.toList()));
 

@@ -32,24 +32,28 @@ public interface ReleaseSaveDTOMapper extends EntityMapper<ReleaseSaveDTO, Relea
                 .collect(Collectors.toList()));
 
         Artist artist = new Artist();
-        if (dto.getArtist().getId() != null) {
-            artist.setId(dto.getArtist().getId());
-        } else {
-            artist.setDateAdded(LocalDate.now());
-            artist.setDateLastChanged(LocalDate.now());
-            artist.setName(dto.getArtist().getName());
-            artist.setItemType("Artist");
+        if (dto.getArtist() != null) {
+            if (dto.getArtist().getId() != null) {
+                artist.setId(dto.getArtist().getId());
+            } else {
+                artist.setDateAdded(LocalDate.now());
+                artist.setDateLastChanged(LocalDate.now());
+                artist.setName(dto.getArtist().getName());
+                artist.setItemType("Artist");
+            }
         }
         release.setArtist(artist);
 
         Label label = new Label();
-        if (dto.getLabel().getId() != null) {
-            label.setId(dto.getLabel().getId());
-        } else {
-            label.setDateAdded(LocalDate.now());
-            label.setDateLastChanged(LocalDate.now());
-            label.setName(dto.getLabel().getName());
-            label.setItemType("Label");
+        if (dto.getLabel() != null) {
+            if (dto.getLabel().getId() != null) {
+                label.setId(dto.getLabel().getId());
+            } else {
+                label.setDateAdded(LocalDate.now());
+                label.setDateLastChanged(LocalDate.now());
+                label.setName(dto.getLabel().getName());
+                label.setItemType("Label");
+            }
         }
         release.setLabel(label);
 

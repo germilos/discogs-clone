@@ -3,9 +3,11 @@ package com.milos.releasemicroservice.service.dto;
 import com.milos.releasemicroservice.domain.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class ReleaseSaveDTO
 	private User contributor;
 	//	private Set<Image> images;
 	//	private List<MultipartFile> imageFiles;
-	private MultipartFile[] imageFiles;
+//	private MultipartFile[] images;
 	//	private ImageMultipleSaveDTO images;
 	private String format;
 	private String country;
@@ -36,6 +38,6 @@ public class ReleaseSaveDTO
 		this.genres = new ArrayList<>();
 		this.styles = new ArrayList<>();
 		this.tracks = new ArrayList<>();
-		//		this.images = new HashSet<>();
+//		this.images = new MultipartFile[10];
 	}
 }
