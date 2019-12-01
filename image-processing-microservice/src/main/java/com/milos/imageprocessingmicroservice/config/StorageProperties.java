@@ -11,7 +11,7 @@ public class StorageProperties
 	/**
 	 * Folder location for storing files
 	 */
-	private String location = "C:\\java\\moje\\projekti\\discogs\\image-processing-microservice\\src\\main\\resources\\static\\images";
+	private String location = "C:\\Users\\Milos\\Desktop\\discogs-clone\\image-processing-microservice\\src\\main\\resources\\static\\images";
 
 	public String getLocation()
 	{
