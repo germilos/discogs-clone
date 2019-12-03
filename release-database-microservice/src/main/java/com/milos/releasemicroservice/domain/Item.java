@@ -1,5 +1,6 @@
 package com.milos.releasemicroservice.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.*;
@@ -48,6 +49,7 @@ public abstract class Item {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
+    @JsonManagedReference("contributions_item_mr")
     protected List<Contribution> contributions;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)

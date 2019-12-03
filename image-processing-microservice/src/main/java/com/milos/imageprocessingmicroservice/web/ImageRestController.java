@@ -45,4 +45,11 @@ public class ImageRestController
 				.map(file -> storageService.store(new ImageSaveDTO(file, uploaderId, itemId)))
 				.collect(Collectors.toList());
 	}
+
+//	@GetMapping(value = "/images")
+//	public List<ImageDTO> getImagesByItemId(@RequestParam long itemId) {
+//
+//	}
+
+
 }

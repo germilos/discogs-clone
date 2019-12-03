@@ -22,6 +22,7 @@ public class Contribution {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
+    @JsonBackReference("item_contribution_br")
     private Item item;
 
     @ManyToOne(fetch = FetchType.LAZY)
