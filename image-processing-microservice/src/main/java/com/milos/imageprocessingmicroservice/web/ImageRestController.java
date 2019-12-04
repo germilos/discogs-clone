@@ -16,41 +16,41 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/v1")
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
-public class ImageRestController
-{
-	private final StorageService storageService;
+public class ImageRestController {
+    private final StorageService storageService;
 
-	public ImageRestController(final StorageService storageService)
-	{
-		this.storageService = storageService;
-	}
+    public ImageRestController(final StorageService storageService) {
+        this.storageService = storageService;
+    }
 
-	@PostMapping("/images")
-	public ImageDTO storeImage(ImageSaveDTO imageSaveDTO)
-	{
-		ImageDTO returnedId = storageService.store(imageSaveDTO);
-		return returnedId;
-	}
+    @PostMapping("/images")
+    public ImageDTO storeImage(ImageSaveDTO imageSaveDTO) {
+        ImageDTO returnedId = storageService.store(imageSaveDTO);
+        return returnedId;
+    }
 
-	@PostMapping(value = "/images/batch", consumes = "multipart/form-data")
-	public List<ImageDTO> storeImages(@RequestParam("uploaderId") Long uploaderId, @RequestParam("itemId") Long itemId,
-			@RequestPart("images") MultipartFile[] images)
-	{
-		ImageMultipleSaveDTO imageMultipleSaveDTO = new ImageMultipleSaveDTO(Arrays.asList(images), uploaderId, itemId);
-		log.info("REST request to batch-save images...");
-		imageMultipleSaveDTO.getFiles().forEach(file -> {
-			log.info("\tName: {}", file.getOriginalFilename());
-		});
+    @PostMapping(value = "/images/batch", consumes = "multipart/form-data")
+    public List<ImageDTO> storeImages(@RequestParam("uploaderId") Long uploaderId, @RequestParam("itemId") Long itemId,
+                                      @RequestPart("images") MultipartFile[] images) {
+        ImageMultipleSaveDTO imageMultipleSaveDTO = new ImageMultipleSaveDTO(Arrays.asList(images), uploaderId, itemId);
+        log.info("REST request to batch-save images...");
+        imageMultipleSaveDTO.getFiles().forEach(file -> {
+            log.info("\tName: {}", file.getOriginalFilename());
+        });
 
-		return imageMultipleSaveDTO.getFiles().stream()
-				.map(file -> storageService.store(new ImageSaveDTO(file, uploaderId, itemId)))
-				.collect(Collectors.toList());
-	}
+        return imageMultipleSaveDTO.getFiles().stream()
+                .map(file -> storageService.store(new ImageSaveDTO(file, uploaderId, itemId)))
+                .collect(Collectors.toList());
+    }
 
-	@GetMapping(value = "/images/{itemId}")
-	public List<byte[]> getImagesByItemId(@PathVariable long itemId)
-	{
-		return storageService.loadImagesByItemId(itemId);
-	}
+    @PostMapping(value = "/images/{itemId}")
+    public List<ImageDTO> updateImages(@RequestParam("uploaderId") Long uploaderId, @PathVariable("itemId") Long itemId,
+                                       @RequestPart("images") MultipartFile[] images) {
+		
+    }
 
+    @GetMapping(value = "/images/{itemId}")
+    public List<byte[]> getImagesByItemId(@PathVariable long itemId) {
+        return storageService.loadImagesByItemId(itemId);
+    }
 }
