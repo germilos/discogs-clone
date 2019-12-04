@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController
 @RequestMapping("/v1")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class ImageRestController
 {
 	private final StorageService storageService;
@@ -46,10 +47,10 @@ public class ImageRestController
 				.collect(Collectors.toList());
 	}
 
-//	@GetMapping(value = "/images")
-//	public List<ImageDTO> getImagesByItemId(@RequestParam long itemId) {
-//
-//	}
-
+	@GetMapping(value = "/images/{itemId}")
+	public List<byte[]> getImagesByItemId(@PathVariable long itemId)
+	{
+		return storageService.loadImagesByItemId(itemId);
+	}
 
 }
