@@ -33,6 +33,7 @@ public class ImageRestController {
     public List<ImageDTO> storeImages(@RequestParam("uploaderId") Long uploaderId, @RequestParam("itemId") Long itemId,
                                       @RequestPart("images") MultipartFile[] images) {
         ImageMultipleSaveDTO imageMultipleSaveDTO = new ImageMultipleSaveDTO(Arrays.asList(images), uploaderId, itemId);
+
         log.info("REST request to batch-save images...");
         imageMultipleSaveDTO.getFiles().forEach(file -> {
             log.info("\tName: {}", file.getOriginalFilename());
@@ -43,11 +44,11 @@ public class ImageRestController {
                 .collect(Collectors.toList());
     }
 
-    @PostMapping(value = "/images/{itemId}")
-    public List<ImageDTO> updateImages(@RequestParam("uploaderId") Long uploaderId, @PathVariable("itemId") Long itemId,
-                                       @RequestPart("images") MultipartFile[] images) {
-		
-    }
+//    @PostMapping(value = "/images/{itemId}")
+//    public List<ImageDTO> updateImages(@RequestParam("uploaderId") Long uploaderId, @PathVariable("itemId") Long itemId,
+//                                       @RequestPart("images") MultipartFile[] images) {
+//
+//    }
 
     @GetMapping(value = "/images/{itemId}")
     public List<byte[]> getImagesByItemId(@PathVariable long itemId) {
