@@ -9056,3 +9056,632 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 2019-12-05 09:52:17.198  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8081"]
 2019-12-05 09:52:17.245  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8081 (http) with context path ''
 2019-12-05 09:52:17.839  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : Started ReleaseMicroserviceApplication in 11.666 seconds (JVM running for 13.911)
+2019-12-10 12:58:57.685  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 12:58:57.700  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 12:58:57.950  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$50d998c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:58:58.388  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 12:58:59.231  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=117067a896621af60a90a544e5c838238d55f60c, state=null
+2019-12-10 12:58:59.231  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 12:58:59.231  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 12:59:00.012  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 12:59:00.153  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137ms. Found 5 repository interfaces.
+2019-12-10 12:59:00.403  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=970d444f-256f-39bd-853e-ecbfab738b3d
+2019-12-10 12:59:00.606  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:00.637  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$50d998c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:01.121  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 12:59:01.121  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 12:59:01.121  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 12:59:01.121  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 12:59:01.278  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 12:59:01.278  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2031 ms
+2019-12-10 12:59:01.840  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 12:59:02.059  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 12:59:02.152  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 12:59:02.309  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 12:59:02.574  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 12:59:03.699  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 12:59:03.715  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 12:59:04.371  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 12:59:04.618  WARN MILOSG --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'queueConsumer': Unsatisfied dependency expressed through method 'receiveMessage' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-10 12:59:04.620  WARN MILOSG --- [  restartedMain] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'rabbitConnectionFactory': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:409)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1012)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:563)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.milos.releasemicroservice.ReleaseMicroserviceApplication.main(ReleaseMicroserviceApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2019-12-10 12:59:04.622  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 12:59:04.625  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2019-12-10 12:59:04.640  INFO MILOSG --- [  restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 12:59:04.779 ERROR MILOSG --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method receiveMessage in com.milos.releasemicroservice.util.QueueConsumer required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+2019-12-10 12:59:30.343  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 12:59:30.343  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 12:59:30.609  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$68071980] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:31.031  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 12:59:31.902  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=117067a896621af60a90a544e5c838238d55f60c, state=null
+2019-12-10 12:59:31.918  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 12:59:31.918  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 12:59:32.574  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 12:59:32.699  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123ms. Found 5 repository interfaces.
+2019-12-10 12:59:32.918  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=970d444f-256f-39bd-853e-ecbfab738b3d
+2019-12-10 12:59:33.105  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:33.136  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$68071980] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:33.634  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 12:59:33.644  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 12:59:33.645  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 12:59:33.646  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 12:59:33.767  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 12:59:33.767  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1833 ms
+2019-12-10 12:59:34.252  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 12:59:34.439  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 12:59:34.517  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 12:59:34.642  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 12:59:34.861  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 12:59:35.951  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 12:59:35.951  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 12:59:36.509  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 12:59:36.775  WARN MILOSG --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'container' defined in class path resource [com/milos/releasemicroservice/config/RabbitConfiguration.class]: Unsatisfied dependency expressed through method 'container' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listenerAdapter' defined in class path resource [com/milos/releasemicroservice/config/RabbitConfiguration.class]: Unsatisfied dependency expressed through method 'listenerAdapter' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.amqp.rabbit.listener.BlockingQueueConsumer' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-10 12:59:36.775  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 12:59:36.790  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2019-12-10 12:59:36.806  INFO MILOSG --- [  restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 12:59:36.931 ERROR MILOSG --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method listenerAdapter in com.milos.releasemicroservice.config.RabbitConfiguration required a bean of type 'org.springframework.amqp.rabbit.listener.BlockingQueueConsumer' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.amqp.rabbit.listener.BlockingQueueConsumer' in your configuration.
+
+2019-12-10 12:59:54.846  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 12:59:54.846  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 12:59:55.096  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b567f94c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:55.521  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 12:59:56.359  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=117067a896621af60a90a544e5c838238d55f60c, state=null
+2019-12-10 12:59:56.359  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 12:59:56.374  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 12:59:57.066  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 12:59:57.206  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130ms. Found 5 repository interfaces.
+2019-12-10 12:59:57.425  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=970d444f-256f-39bd-853e-ecbfab738b3d
+2019-12-10 12:59:57.597  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:57.628  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b567f94c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 12:59:58.081  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 12:59:58.081  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 12:59:58.081  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 12:59:58.081  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 12:59:58.222  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 12:59:58.222  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1832 ms
+2019-12-10 12:59:58.633  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 12:59:58.805  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 12:59:58.899  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 12:59:59.039  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 12:59:59.317  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 13:00:00.411  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 13:00:00.411  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 13:00:00.999  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 13:00:01.280  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 13:00:01.280  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 13:00:01.280  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 13:00:01.280  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 13:00:01.436  INFO MILOSG --- [  restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 13:00:02.131  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-10 13:00:02.193  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4fedc2f0:0/SimpleConnection@4e0bc7e3 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 56376]
+2019-12-10 13:00:02.271  WARN MILOSG --- [    container-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{"Some message"}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NoSuchMethodException: org.springframework.amqp.core.Queue.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 13:00:02.271  WARN MILOSG --- [    container-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'"Some message"' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=true, receivedExchange=messagequeue-exchange, receivedRoutingKey=, deliveryTag=1, consumerTag=amq.ctag-cJxJlod-QJF11QCm3TSwFA, consumerQueue=messagequeue])
+2019-12-10 13:00:02.271 ERROR MILOSG --- [    container-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:116)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1373)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1657)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1432)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{"Some message"}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	... 6 more
+Caused by: java.lang.NoSuchMethodException: org.springframework.amqp.core.Queue.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 13:00:02.287  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8081"]
+2019-12-10 13:00:02.303  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-10 13:00:02.644  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : Started ReleaseMicroserviceApplication in 8.464 seconds (JVM running for 10.048)
+2019-12-10 14:28:11.097  WARN MILOSG --- [    container-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{Some message}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NoSuchMethodException: org.springframework.amqp.core.Queue.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 14:28:11.113  WARN MILOSG --- [    container-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'Some message' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=messagequeue-exchange, receivedRoutingKey=, deliveryTag=2, consumerTag=amq.ctag-cJxJlod-QJF11QCm3TSwFA, consumerQueue=messagequeue])
+2019-12-10 14:28:11.113 ERROR MILOSG --- [    container-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:116)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1373)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1657)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1432)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{Some message}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	... 6 more
+Caused by: java.lang.NoSuchMethodException: org.springframework.amqp.core.Queue.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 14:33:00.044  WARN MILOSG --- [    container-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{"Some message!"}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NoSuchMethodException: org.springframework.amqp.core.Queue.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 14:33:00.044  WARN MILOSG --- [    container-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'"Some message!"' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=messagequeue-exchange, receivedRoutingKey=, deliveryTag=3, consumerTag=amq.ctag-cJxJlod-QJF11QCm3TSwFA, consumerQueue=messagequeue])
+2019-12-10 14:33:00.044 ERROR MILOSG --- [    container-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:116)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1373)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1657)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1432)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{"Some message!"}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	... 6 more
+Caused by: java.lang.NoSuchMethodException: org.springframework.amqp.core.Queue.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 14:37:04.178  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 14:37:04.193  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 14:37:04.431  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3e4de236] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:37:04.868  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 14:37:05.699  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=20e2fb8a13ec6453046e61096a77f6a9bdfc20e4, state=null
+2019-12-10 14:37:05.699  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 14:37:05.699  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 14:37:06.371  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 14:37:06.511  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126ms. Found 5 repository interfaces.
+2019-12-10 14:37:06.761  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=970d444f-256f-39bd-853e-ecbfab738b3d
+2019-12-10 14:37:06.933  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:37:06.949  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3e4de236] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:37:07.465  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 14:37:07.477  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 14:37:07.478  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 14:37:07.479  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 14:37:07.584  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 14:37:07.584  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1869 ms
+2019-12-10 14:37:07.975  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 14:37:08.287  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 14:37:08.365  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 14:37:08.517  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 14:37:08.751  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 14:37:09.809  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 14:37:09.809  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 14:37:10.340  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 14:37:10.563  WARN MILOSG --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'container' defined in class path resource [com/milos/releasemicroservice/config/RabbitConfiguration.class]: Unsatisfied dependency expressed through method 'container' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listenerAdapter' defined in class path resource [com/milos/releasemicroservice/config/RabbitConfiguration.class]: Unsatisfied dependency expressed through method 'listenerAdapter' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.amqp.rabbit.listener.BlockingQueueConsumer' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-10 14:37:10.563  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 14:37:10.563  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2019-12-10 14:37:10.579  INFO MILOSG --- [  restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-10 14:37:10.704 ERROR MILOSG --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method listenerAdapter in com.milos.releasemicroservice.config.RabbitConfiguration required a bean of type 'org.springframework.amqp.rabbit.listener.BlockingQueueConsumer' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.amqp.rabbit.listener.BlockingQueueConsumer' in your configuration.
+
+2019-12-10 14:38:36.597  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 14:38:36.603  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 14:38:36.845  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$113690] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:38:37.281  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 14:38:38.133  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=20e2fb8a13ec6453046e61096a77f6a9bdfc20e4, state=null
+2019-12-10 14:38:38.133  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 14:38:38.141  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 14:38:38.947  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 14:38:39.071  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 5 repository interfaces.
+2019-12-10 14:38:39.356  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=970d444f-256f-39bd-853e-ecbfab738b3d
+2019-12-10 14:38:39.586  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:38:39.615  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$113690] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:38:40.100  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 14:38:40.115  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 14:38:40.116  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 14:38:40.117  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 14:38:40.329  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 14:38:40.329  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2171 ms
+2019-12-10 14:38:40.856  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 14:38:41.086  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 14:38:41.185  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 14:38:41.366  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 14:38:41.700  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 14:38:43.228  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 14:38:43.235  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 14:38:44.045  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 14:38:44.359  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 14:38:44.359  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 14:38:44.375  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 14:38:44.375  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 14:38:44.529  INFO MILOSG --- [  restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 14:38:45.190  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-10 14:38:45.264  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#711a9f47:0/SimpleConnection@6ae4fff4 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 49567]
+2019-12-10 14:38:45.406  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8081"]
+2019-12-10 14:38:45.431  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-10 14:38:45.779  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : Started ReleaseMicroserviceApplication in 9.914 seconds (JVM running for 11.512)
+2019-12-10 14:39:07.546  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 14:39:07.554  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 14:39:07.844  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$59c8bf16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:39:08.293  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 14:39:09.140  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=20e2fb8a13ec6453046e61096a77f6a9bdfc20e4, state=null
+2019-12-10 14:39:09.141  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 14:39:09.149  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 14:39:09.813  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 14:39:09.941  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120ms. Found 5 repository interfaces.
+2019-12-10 14:39:10.187  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=970d444f-256f-39bd-853e-ecbfab738b3d
+2019-12-10 14:39:10.388  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:39:10.421  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$59c8bf16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 14:39:10.837  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 14:39:10.848  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 14:39:10.849  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 14:39:10.850  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 14:39:10.991  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 14:39:10.992  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1824 ms
+2019-12-10 14:39:11.458  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 14:39:11.691  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 14:39:11.795  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 14:39:11.946  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 14:39:12.154  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 14:39:13.278  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 14:39:13.284  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 14:39:13.889  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 14:39:14.231  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 14:39:14.231  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 14:39:14.237  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 14:39:14.237  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 14:39:14.383  INFO MILOSG --- [  restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 14:39:15.170  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-10 14:39:15.233  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#12444a38:0/SimpleConnection@88c9d98 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 49650]
+2019-12-10 14:39:15.357  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8081"]
+2019-12-10 14:39:15.387  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-10 14:39:15.722  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : Started ReleaseMicroserviceApplication in 8.888 seconds (JVM running for 10.532)
+2019-12-10 14:39:35.118  INFO MILOSG --- [    container-1] c.m.r.u.QueueConsumer                    : Received (String) "Some message!"
+2019-12-10 14:39:35.118  INFO MILOSG --- [    container-1] c.m.r.u.QueueConsumer                    : Received message: "Some message!"
+2019-12-10 15:24:38.651  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 15:24:38.666  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 15:24:38.916  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$535b146d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 15:24:39.354  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 15:24:40.213  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=20e2fb8a13ec6453046e61096a77f6a9bdfc20e4, state=null
+2019-12-10 15:24:40.213  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 15:24:40.213  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 15:24:40.885  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 15:24:41.009  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 5 repository interfaces.
+2019-12-10 15:24:41.244  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=970d444f-256f-39bd-853e-ecbfab738b3d
+2019-12-10 15:24:41.447  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 15:24:41.478  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$535b146d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 15:24:41.978  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 15:24:41.994  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 15:24:41.994  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 15:24:41.994  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 15:24:42.119  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 15:24:42.119  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1891 ms
+2019-12-10 15:24:42.540  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 15:24:42.775  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 15:24:42.868  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 15:24:43.009  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 15:24:43.259  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 15:24:44.337  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 15:24:44.353  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 15:24:44.915  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 15:24:45.212  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 15:24:45.212  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 15:24:45.227  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 15:24:45.227  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 15:24:45.399  INFO MILOSG --- [  restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 15:24:46.104  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-10 15:24:46.182  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#39f3c5e2:0/SimpleConnection@37e48812 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 54670]
+2019-12-10 15:24:46.354  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8081"]
+2019-12-10 15:24:46.401  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-10 15:24:46.823  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : Started ReleaseMicroserviceApplication in 8.843 seconds (JVM running for 10.739)
+2019-12-10 15:35:20.489  INFO MILOSG --- [nio-8081-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-10 15:35:20.489  INFO MILOSG --- [nio-8081-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-12-10 15:35:20.489  INFO MILOSG --- [nio-8081-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2019-12-10 15:37:50.698  WARN MILOSG --- [    container-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{[{"id":1,"uploadDate":{"nano":452246400,"year":2019,"monthValue":12,"dayOfMonth":10,"hour":15,"minute":37,"second":50,"month":"DECEMBER","dayOfWeek":"TUESDAY","dayOfYear":344,"chronology":{"id":"ISO","calendarType":"iso8601"}},"itemId":1,"uploaderId":1}]}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NoSuchMethodException: com.milos.releasemicroservice.util.QueueConsumer.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 15:37:50.698  WARN MILOSG --- [    container-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[{"id":1,"uploadDate":{"nano":452246400,"year":2019,"monthValue":12,"dayOfMonth":10,"hour":15,"minute":37,"second":50,"month":"DECEMBER","dayOfWeek":"TUESDAY","dayOfYear":344,"chronology":{"id":"ISO","calendarType":"iso8601"}},"itemId":1,"uploaderId":1}]' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=messagequeue-exchange, receivedRoutingKey=, deliveryTag=1, consumerTag=amq.ctag-2Jxk_vcfxDKAKwnrRmqUgw, consumerQueue=messagequeue])
+2019-12-10 15:37:50.698 ERROR MILOSG --- [    container-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:116)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1373)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1657)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1432)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class java.lang.String], value = [{[{"id":1,"uploadDate":{"nano":452246400,"year":2019,"monthValue":12,"dayOfMonth":10,"hour":15,"minute":37,"second":50,"month":"DECEMBER","dayOfWeek":"TUESDAY","dayOfYear":344,"chronology":{"id":"ISO","calendarType":"iso8601"}},"itemId":1,"uploaderId":1}]}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	... 6 more
+Caused by: java.lang.NoSuchMethodException: com.milos.releasemicroservice.util.QueueConsumer.receiveMessage(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 15:53:12.722  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 15:53:12.733  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 15:53:13.101  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a4855437] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 15:53:13.729  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 15:53:14.682  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=20e2fb8a13ec6453046e61096a77f6a9bdfc20e4, state=null
+2019-12-10 15:53:14.683  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 15:53:14.691  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 15:53:16.031  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 15:53:16.212  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170ms. Found 5 repository interfaces.
+2019-12-10 15:53:16.659  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=2ab3fd47-5ede-3c33-9966-1dd1478b5329
+2019-12-10 15:53:16.975  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 15:53:17.015  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a4855437] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 15:53:17.581  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 15:53:17.596  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 15:53:17.597  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 15:53:17.598  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 15:53:17.737  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 15:53:17.737  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 3024 ms
+2019-12-10 15:53:18.331  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 15:53:18.609  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 15:53:18.713  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 15:53:18.889  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 15:53:19.119  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 15:53:20.687  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 15:53:20.699  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 15:53:21.675  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 15:53:22.048  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 15:53:22.048  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 15:53:22.058  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 15:53:22.058  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 15:53:22.288  INFO MILOSG --- [  restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 15:53:23.501  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-12-10 15:53:23.640  INFO MILOSG --- [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#230516a9:0/SimpleConnection@72267592 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 57868]
+2019-12-10 15:53:23.754  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8081"]
+2019-12-10 15:53:23.782  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-10 15:53:24.173  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : Started ReleaseMicroserviceApplication in 12.423 seconds (JVM running for 14.2)
+2019-12-10 15:57:04.031  WARN MILOSG --- [    container-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class [B], value = [{[B@34fd9c67}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NoSuchMethodException: com.milos.releasemicroservice.util.QueueConsumer.receiveMessage([B)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 15:57:04.035  WARN MILOSG --- [    container-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[{"id":1,"uploadDate":{"nano":823806700,"year":2019,"monthValue":12,"dayOfMonth":10,"hour":15,"minute":57,"second":3,"month":"DECEMBER","dayOfWeek":"TUESDAY","dayOfYear":344,"chronology":{"id":"ISO","calendarType":"iso8601"}},"itemId":1,"uploaderId":1}]' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __TypeId__=java.util.ArrayList}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=messagequeue-exchange, receivedRoutingKey=, deliveryTag=1, consumerTag=amq.ctag-U6L0G2lOw1NeKCr3b_hUaA, consumerQueue=messagequeue])
+2019-12-10 15:57:04.035 ERROR MILOSG --- [    container-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:116)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1373)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1657)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1432)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:958)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:908)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:81)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1279)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1185)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to invoke target method 'receiveMessage' with argument type = [class [B], value = [{[B@34fd9c67}]
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:405)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.onMessage(MessageListenerAdapter.java:293)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1569)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1488)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1476)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1467)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1411)
+	... 6 more
+Caused by: java.lang.NoSuchMethodException: com.milos.releasemicroservice.util.QueueConsumer.receiveMessage([B)
+	at java.base/java.lang.Class.getMethod(Class.java:2109)
+	at org.springframework.util.MethodInvoker.prepare(MethodInvoker.java:184)
+	at org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter.invokeListenerMethod(MessageListenerAdapter.java:383)
+	... 12 more
+2019-12-10 16:03:52.017  INFO MILOSG --- [  restartedMain] o.s.b.d.r.ChangeableUrls                 : The Class-Path manifest attribute in C:\Users\Milos\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Milos/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2019-12-10 16:03:52.024  INFO MILOSG --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-10 16:03:52.285  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6e50376e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 16:03:52.718  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-12-10 16:03:53.542  INFO MILOSG --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=release-database-microservice, profiles=[default], label=null, version=20e2fb8a13ec6453046e61096a77f6a9bdfc20e4, state=null
+2019-12-10 16:03:53.543  INFO MILOSG --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: OriginTrackedCompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, OriginTrackedMapPropertySource {name='file://C:/Users/Milos/Desktop/discogs-config-repo/release-database-microservice.properties'}]}
+2019-12-10 16:03:53.548  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : The following profiles are active: default
+2019-12-10 16:03:54.178  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-10 16:03:54.311  INFO MILOSG --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124ms. Found 5 repository interfaces.
+2019-12-10 16:03:54.537  INFO MILOSG --- [  restartedMain] o.s.c.c.s.GenericScope                   : BeanFactory id=736abb6c-89cf-331c-b180-7cffb8c29257
+2019-12-10 16:03:54.713  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 16:03:54.741  INFO MILOSG --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6e50376e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-10 16:03:55.170  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8081 (http)
+2019-12-10 16:03:55.183  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8081"]
+2019-12-10 16:03:55.185  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-12-10 16:03:55.185  INFO MILOSG --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 16:03:55.304  INFO MILOSG --- [  restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-12-10 16:03:55.305  INFO MILOSG --- [  restartedMain] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1742 ms
+2019-12-10 16:03:55.749  WARN MILOSG --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-10 16:03:55.992  INFO MILOSG --- [  restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: persistenceUnit]
+2019-12-10 16:03:56.064  INFO MILOSG --- [  restartedMain] o.h.Version                              : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-10 16:03:56.205  INFO MILOSG --- [  restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-10 16:03:56.407  INFO MILOSG --- [  restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-10 16:03:57.403  INFO MILOSG --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-10 16:03:57.410  INFO MILOSG --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+2019-12-10 16:03:57.973  WARN MILOSG --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-10 16:03:58.197  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 16:03:58.197  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 16:03:58.203  WARN MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2019-12-10 16:03:58.203  INFO MILOSG --- [  restartedMain] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-10 16:03:58.358  INFO MILOSG --- [  restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 16:03:59.131  INFO MILOSG --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8081"]
+2019-12-10 16:03:59.156  INFO MILOSG --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-10 16:03:59.482  INFO MILOSG --- [  restartedMain] c.m.r.ReleaseMicroserviceApplication     : Started ReleaseMicroserviceApplication in 8.178 seconds (JVM running for 9.829)
